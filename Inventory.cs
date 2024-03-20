@@ -10,7 +10,7 @@ namespace Prog224W24_StephanieLopez
     public class Inventory : IEnumerable<Product>
     {
         //Field
-        public List<Product> Products { set; get; }
+        public List<Product> Products { get; set; }
 
         public Inventory()
         {

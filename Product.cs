@@ -9,8 +9,8 @@ namespace Prog224W24_StephanieLopez
     public abstract class Product
     {
         //Fields
-        public string name_ { set; get; }
-        public double price_ { set; get; }
+        public string name_ { get; set; }
+        public double price_ { get; set; }
 
         //Methods
         public override string ToString()

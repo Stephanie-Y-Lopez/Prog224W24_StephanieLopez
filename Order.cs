@@ -12,6 +12,7 @@ namespace Prog224W24_StephanieLopez
         public List<Product> Products { get; set; } = new List<Product>();
         public double totalprice_ { get; set; }
 
+        //Methods 
         public void AddProduct(Product product)
         {
             Products.Add(product);

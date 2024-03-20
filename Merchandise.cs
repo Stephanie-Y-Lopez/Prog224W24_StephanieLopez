@@ -9,7 +9,7 @@ namespace Prog224W24_StephanieLopez
     public class Merchandise : Product
     {
         //Field
-        public string category_ { set; get; }
+        public string category_ { get; set; }
 
         //Method
         public override string GetProductType()

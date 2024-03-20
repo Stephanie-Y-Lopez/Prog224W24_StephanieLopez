@@ -9,7 +9,7 @@ namespace Prog224W24_StephanieLopez
     public class Beverage: Product
     {
         //Field
-        public string size_ { set; get; }
+        public string size_ { get; set; }
 
         //Method
         public override string GetProductType()

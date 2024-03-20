@@ -9,7 +9,7 @@ namespace Prog224W24_StephanieLopez
     public class Food : Product
     {
         //Field
-        public DateTime ExpirationDate { set; get; }
+        public DateTime ExpirationDate { get; set; }
 
         //Method
         public override string GetProductType()
