@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace Prog224W24_StephanieLopez
 {
@@ -35,12 +37,24 @@ namespace Prog224W24_StephanieLopez
             File.WriteAllText(filePath, json);
         }
 
+        //Figured out I had to add in more code because when I did case 4 'exit' it crashed, so I put in a try and catch to help with the deserialization of JSON. And it doesnt crash anymore yay!
         public void LoadFromJson(string filePath)
         {
-            if (File.Exists(filePath))
+            try
             {
-                string json = File.ReadAllText(filePath);
-                Products = JsonConvert.DeserializeObject<List<Product>>(json);
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    Products = JsonConvert.DeserializeObject<List<Product>>(json);
+                }
+                else
+                {
+                    Console.WriteLine("JSON file does not exist.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading inventory data: {ex.Message}");
             }
         }
 

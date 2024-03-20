@@ -20,7 +20,7 @@
                 Console.WriteLine("2. Add Product");
                 Console.WriteLine("3. Ring Up Customer");
                 Console.WriteLine("4. Exit");
-                Console.Write("Enter your choice: ");
+                Console.Write("Enter your choice please: ");
                 string choice = Console.ReadLine();
 
                 switch (choice)
@@ -101,7 +101,7 @@
             Order order = new Order();
 
             Console.WriteLine("Creating an order");
-            bool addMore;
+            bool addMore = true;
             do
             {
                 DisplayProducts(inventory);
